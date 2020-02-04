@@ -1,0 +1,15 @@
+﻿Build started 6/25/2019 10:02:03 AM.
+     1>Project "F:\CODE\Parallel Processing\Lab3\practice1\practice1\practice1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft HPC Pack 2012\Inc" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\practice1.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>f:\code\parallel processing\lab3\practice1\practice1\source.cpp(1): warning C4627: '#include "mpi.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>f:\code\parallel processing\lab3\practice1\practice1\source.cpp(3): warning C4627: '#include <stdlib.h>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>f:\code\parallel processing\lab3\practice1\practice1\source.cpp(41): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+     1>Done Building Project "F:\CODE\Parallel Processing\Lab3\practice1\practice1\practice1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.36

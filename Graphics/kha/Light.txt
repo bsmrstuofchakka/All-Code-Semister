@@ -1,0 +1,75 @@
+#define WHITE 1, 1, 1
+#define LIGHT 0.0, 0.0, 1.0
+
+double Angle,lightAngle;
+
+Before Add An Object
+
+/************************************
+	/ Add your lighting effects from here
+	*************************************/
+
+	//moving light source
+/**/   GLfloat position[] = {200.0*cos(lightAngle),200.0*sin(lightAngle), 100, 1.0}; //Positioned at (4, 0, 8)
+    glLightfv(GL_LIGHT1, GL_POSITION, position);
+
+
+  // representative object of the light source
+ /* */
+
+    GLfloat light_emission[] = {1.0, 1.0, 1.0, 1.0};
+    GLfloat unset[]={0,0,0,1};
+    glMaterialfv(GL_FRONT, GL_EMISSION, light_emission);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, unset);
+    glPushMatrix();
+   //glTranslatef (-10.0,-10.0,5);
+    glTranslatef (200.0*cos(lightAngle),200.0*sin(lightAngle),100);
+    glutSolidSphere(7.0, 36, 36);
+    glPopMatrix();
+
+//object being illuminated
+/**/   GLfloat mat_ambient[] = { 0.0, 0.0, 0.5, 1.0 };
+    GLfloat mat_diffuse[] = { 0, 0, 0.5, 1.0 };
+    GLfloat mat_specular[] = { LIGHT, 1.0 }; //equal to the light source
+    GLfloat low_shininess[] = { 5.0 };
+    GLfloat mid_shininess[] = { 50.0 };
+    GLfloat high_shininess[] = { 100.0 };
+
+    glPushMatrix();
+    glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+    glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
+    glMaterialfv(GL_FRONT, GL_EMISSION, unset);
+    glPopMatrix();
+
+Before Projection:
+
+//Add global ambient light
+   GLfloat lmodel_ambient[] = { .3, .3, .3, .3 }; //color of the global ambient light
+   glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
+
+
+
+
+
+   //effect of local light source: directed diffuse light
+/**/GLfloat diffuseDir[] = {LIGHT, 1.0}; //Color (0.5, 0.2, 0.2)
+    GLfloat lightDir[] = {1, 1, 1, 0.0}; //Coming from the direction (-1, 0.5, 0.5)
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseDir);
+    glLightfv(GL_LIGHT0, GL_POSITION, lightDir);
+
+
+	//effect of local light source: point diffuse light
+	/**/
+    GLfloat diffusePoint[] = {LIGHT, 1.0}; //Color (0.5, 0.5, 0.5)
+    //GLfloat position[] = {-10.0, -10.0, 5.0, 1.0}; //Positioned at (-10, -10, 5)
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, diffusePoint); //
+    //glLightfv(GL_LIGHT1, GL_POSITION, position);
+
+
+
+    glEnable(GL_NORMALIZE); //Automatically normalize normals needed by the illumination model
+    glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0); //Enable light #0
+	glEnable(GL_LIGHT1); //Enable light #1

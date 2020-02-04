@@ -1,0 +1,5 @@
+clear;
+close all;
+clc;
+x=input('Enter a signal sequence:');
+y=input('Enter another signal sequence:');

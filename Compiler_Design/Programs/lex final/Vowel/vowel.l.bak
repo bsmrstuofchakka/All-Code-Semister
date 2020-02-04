@@ -1,0 +1,22 @@
+%{
+#include<stdio.h>
+int vowel=0;
+int cons=0;
+int dig=0;
+%}
+%%
+"a"|"e"|"i"|"o"|"u"|"A"|"E"|"I"|"O"|"U" {printf("is a Vowel\t");vowel++;}
+[a-zA-z] {printf("Is a Consonant\t");cons++;}
+[0-9] {printf("Is a Digit\tt");dig++;}
+%%
+int yywrap()
+{
+return 1;
+}
+main()
+{
+printf("Enter String\n");
+yylex();
+printf("Vowel=%d\n Consonent=%d\n And Digit=%d",vowel,cons,dig);
+getch();
+}

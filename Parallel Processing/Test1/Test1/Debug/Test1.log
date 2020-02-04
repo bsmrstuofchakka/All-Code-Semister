@@ -1,0 +1,14 @@
+﻿Build started 2/12/2019 10:46:44 AM.
+     1>Project "F:\CODE\Parallel Processing\Test1\Test1\Test1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files\Microsoft HPC Pack 2012\Inc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>f:\code\parallel processing\test1\test1\source.cpp(8): warning C4101: 'rc' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\CODE\Parallel Processing\Test1\Debug\Test1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\Microsoft HPC Pack 2012\Lib\i386" msmpi.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\CODE\Parallel Processing\Test1\Debug\Test1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\CODE\Parallel Processing\Test1\Debug\Test1.lib" /MACHINE:X86 Debug\Source.obj
+         Test1.vcxproj -> F:\CODE\Parallel Processing\Test1\Debug\Test1.exe
+     1>Done Building Project "F:\CODE\Parallel Processing\Test1\Test1\Test1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.92

@@ -1,0 +1,23 @@
+%{
+#include<stdio.h>
+int sub=0;
+int c;
+int d;
+%}
+%%
+(ab)|(AB) {c=1;sub++;}
+[a-zA-Z]
+%%
+int yywrap()
+{
+return 1;
+}
+main()
+{
+printf("Enter String\n");
+yylex();
+if(c==1){
+printf("is a substring");}
+printf("Total Substring=%d\n",sub);
+getch();
+}

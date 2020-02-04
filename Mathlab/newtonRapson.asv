@@ -1,0 +1,16 @@
+close all
+clear all
+clc
+
+f=@(x) (x*exp(x)-3);
+df=@(x) (x*exp(x)+exp(x));
+
+x=input('Enter the initial approximation: ');
+
+for i=1:100
+    x1=x-(f/df);
+    x=x1;
+end;
+fprintf('The root of the given equation: %f',x1);
+
+

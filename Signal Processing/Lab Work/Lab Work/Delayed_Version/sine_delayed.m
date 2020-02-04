@@ -1,0 +1,43 @@
+t=-1:.01:1;
+f=2;
+a=1;
+y=a*sin(2*pi*f*t);
+subplot(2,2,1);
+plot(t,y);
+xlabel('amplitude');
+ylabel('time');
+axis([-4 4 -2 2]);
+title('Continuous sinusoidal');
+
+t=-1:.1:1;
+f=2;
+a=1;
+y=a*sin(2*pi*f*t);
+subplot(2,2,2);
+stem(t,y);
+xlabel('amplitude');
+ylabel('time');
+axis([-4 4 -2 2]);
+title('Discrete sinusoidal');
+
+t=-1:.01:1;
+f=2;
+a=1;
+y=a*sin(2*pi*f*t);
+subplot(2,2,3);
+plot(t+3,y);
+xlabel('amplitude');
+ylabel('time');
+axis([-4 4 -2 2]);
+title('Delayed Continuous sinusoidal');
+
+t=-1:.1:1;
+f=2;
+a=1;
+y=a*sin(2*pi*f*t);
+subplot(2,2,4);
+stem(t+3,y);
+xlabel('amplitude');
+ylabel('time');
+axis([-4 4 -2 2]);
+title('Delayed Discrete sinusoidal');

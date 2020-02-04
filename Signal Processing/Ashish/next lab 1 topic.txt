@@ -1,0 +1,4 @@
+unit ramp,unit step, unit parabolic;
+
+Anand kumar
+book: signal and systems

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "practice2", "practice2.exe", "{8B6881CC-B62A-4356-A9EA-6533D8B17BC0}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = F:\CODE\Parallel Processing\Lab2\practice2\Debug\practice2.exe
+		RemoteMachine = MURAD-HOSSAIN
+		StartingDirectory = F:\CODE\Parallel Processing\Lab2\practice2\Debug
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B6881CC-B62A-4356-A9EA-6533D8B17BC0}.Debug|x86.ActiveCfg = Debug|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

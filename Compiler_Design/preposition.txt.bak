@@ -1,0 +1,24 @@
+%{
+	#include<stdio.h>
+	int count=0;
+%}
+
+%%
+
+(in)|(of)|(after)|(to)|(among)|(before)|(for)|(between)|(into)|(up)|(at)|(by)|(from)|(above) {printf("Gotten");count++;}
+
+%%
+
+
+int yywrap()
+{
+return 1;
+}
+
+int main()
+{
+printf("Given input String: ");
+yylex();
+
+return 0;
+}

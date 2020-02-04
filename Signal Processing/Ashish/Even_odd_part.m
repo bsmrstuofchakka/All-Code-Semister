@@ -1,0 +1,13 @@
+clc;
+clear;
+close all;
+t=-3:0.01:3;
+x=@(t)exp(-2.*t).*heaviside(t);
+xe=(x(t)+x(-t))/2;
+xo=(x(t)-x(-t))/2;
+subplot(2,1,1);
+plot(t,xe);
+title('Even part');
+subplot(2,1,2);
+plot(t,xo);
+title('Odd part');

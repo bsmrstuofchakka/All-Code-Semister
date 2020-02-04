@@ -1,0 +1,53 @@
+%{
+    #include <stdio.h>
+    #include <string.h>    
+    #include <stdlib.h>
+    extern int yylex();
+    
+    void yyerror(char *msg);
+    int flag;
+    
+    int i, j,num,num1,r;
+    int k =0;        
+%}
+
+%union {
+    char* f;
+}
+
+%token <f> NUM
+%type <f> E 
+
+%%
+
+S : E	{
+            
+        
+	 num =$1;
+	 if(num="A"|"E"|"I"|"O"|"U"|"a"|"e"|"i"|"o"|"u"|)
+              printf("this is vowel");
+         else  printf("this is consonant");
+
+        }
+  ;
+
+E :  NUM    {$$ = $1;
+             $$ = $1;
+             }
+  ;
+
+%%
+
+void yyerror(char *msg) 
+{
+    fprintf(stderr, "%s\n", msg);
+    exit(1);
+}
+
+int main()
+{
+    yyparse();
+
+    getch();
+    return 0;
+} 

@@ -1,0 +1,44 @@
+clear all
+clc
+n=input('Enter the number of suare matrix n= ');
+for i=1:n
+    for j=1:n
+    fprintf('\nEnter the value of element a(%d,%d): ',i,j);
+    ar(i,j)=input('');
+    end
+end
+for i=1:n
+    fprintf('\nEnter the value of ar1(%d) element of matrix 2:  ',i);
+    ar1(i)=input('');
+end
+for q=1:n
+    i=q;
+    d=ar(i,i);
+    for j=1:n
+        ar(i,j)=ar(i,j)/d;
+    end
+    ar1(i)=ar1(i)/d;
+    for i=q+1:n
+        a=ar(i,q);
+        for j=1:n
+            ar(i,j)=ar(i,j)-(s*ar(q,j));
+        end
+        ar1(i)=ar1(i)-(s*ar1(q));
+    end
+end
+a(n)=ar1(n);
+for w=n-1:1
+    a(w)=ar1(w);
+    for e=w:n-1
+        a(w)=a(w)-(a(e+1)*ar(w,e+1));
+    end
+end
+for j=1:n
+    fprintf('\n The value of x%d=%f',j,a(j));
+end
+
+
+            
+
+    
+    

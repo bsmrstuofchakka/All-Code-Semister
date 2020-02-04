@@ -1,0 +1,20 @@
+% first signal of x1(n)
+syms n w0;
+x1=n+1;
+disp('The input equation is');
+disp(x1);
+x1=ztrans(x1);
+disp('The Z-transform of x is:');
+disp(x1);
+
+x2=iztrans(x1);
+disp('The inverse Z-transform of x is:');
+disp(x2);
+
+% second signal of x11(n)
+x2=cos(w0*n);
+disp('The input equation is');
+disp(x2);
+x1=ztrans(x1);
+disp('The Z-transform of x is:');
+disp(x1);
